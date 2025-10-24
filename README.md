@@ -46,7 +46,7 @@ docker-compose up postgres -d
 
 5. Run migrations:
 ```bash
-npm run migration:run
+npx ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d src/infrastructure/database/data-source.ts
 ```
 
 6. Start the application:
